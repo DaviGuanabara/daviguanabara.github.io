@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import ThemeToggle from "./ThemeToggle.vue";
 
 const isOpen = ref(false);
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const links = [
-  { label: "Projects", to: "/#projects" },
-  { label: "Publications", to: "/#publications" },
-  { label: "Education", to: "/#education" },
-  { label: "Awards", to: "/#awards" },
-  { label: "Contact", to: "/#contact" }
-];
+const links = computed(() => [
+  { label: "Projects", to: `${baseUrl}/#projects` },
+  { label: "Publications", to: `${baseUrl}/#publications` },
+  { label: "Education", to: `${baseUrl}/#education` },
+  { label: "Awards", to: `${baseUrl}/#awards` },
+  { label: "Contact", to: `${baseUrl}/#contact` }
+]);
 </script>
 
 <template>

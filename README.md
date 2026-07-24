@@ -30,3 +30,4 @@ This repository deploys with GitHub Actions.
 - Every push to `main` runs the production build
 - The generated `dist/` folder is uploaded as the Pages artifact
 - GitHub Pages should be configured to use `GitHub Actions` as its source
+- The published project URL is `https://daviguanabara.github.io/davi-guanabara.github.io/`

@@ -16,6 +16,19 @@ const icons = {
   Lattes: DocumentTextIcon,
   Resume: ArrowDownTrayIcon
 } as const;
+
+const resolveHref = (href: string) => {
+  if (href.startsWith("http://") || href.startsWith("https://")) {
+    return href;
+  }
+
+  if (href.startsWith("/")) {
+    const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+    return `${baseUrl}${href}`;
+  }
+
+  return href;
+};
 </script>
 
 <template>
@@ -23,7 +36,7 @@ const icons = {
     <a
       v-for="item in profile.socials"
       :key="item.label"
-      :href="item.href"
+      :href="resolveHref(item.href)"
       :target="item.href.startsWith('http') ? '_blank' : undefined"
       :rel="item.href.startsWith('http') ? 'noreferrer' : undefined"
       :class="item.label === 'Resume' ? 'button-primary' : 'button-secondary'"

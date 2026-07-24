@@ -14,9 +14,9 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
       </p>
     </header>
 
-    <a href="/" class="button-secondary">
+    <RouterLink to="/" class="button-secondary">
       Return home
       <ArrowTopRightOnSquareIcon class="h-4 w-4" />
-    </a>
+    </RouterLink>
   </section>
 </template>
