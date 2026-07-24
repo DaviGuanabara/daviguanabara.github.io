@@ -14,17 +14,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         app: fileURLToPath(new URL("./app.html", import.meta.url))
-      },
-      output: {
-        entryFileNames: "assets/index.js",
-        chunkFileNames: "assets/[name].js",
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name?.endsWith(".css")) {
-            return "assets/index.css";
-          }
-
-          return "assets/[name][extname]";
-        }
       }
     }
   }
