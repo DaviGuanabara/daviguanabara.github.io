@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { computed, ref } from "vue";
+import { ref } from "vue";
+import type { RouteLocationRaw } from "vue-router";
 import ThemeToggle from "./ThemeToggle.vue";
 
 const isOpen = ref(false);
-const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const links = computed(() => [
-  { label: "Projects", to: `${baseUrl}/#projects` },
-  { label: "Publications", to: `${baseUrl}/#publications` },
-  { label: "Education", to: `${baseUrl}/#education` },
-  { label: "Awards", to: `${baseUrl}/#awards` },
-  { label: "Contact", to: `${baseUrl}/#contact` }
-]);
+const links: Array<{ label: string; to: RouteLocationRaw }> = [
+  { label: "Projects", to: { path: "/", query: { section: "projects" } } },
+  { label: "Publications", to: { path: "/", query: { section: "publications" } } },
+  { label: "Education", to: { path: "/", query: { section: "education" } } },
+  { label: "Awards", to: { path: "/", query: { section: "awards" } } },
+  { label: "Contact", to: { path: "/", query: { section: "contact" } } }
+];
 </script>
 
 <template>
@@ -25,14 +25,14 @@ const links = computed(() => [
       </RouterLink>
 
       <nav class="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
-        <a
+        <RouterLink
           v-for="link in links"
-          :key="link.to"
-          :href="link.to"
+          :key="link.label"
+          :to="link.to"
           class="nav-link"
         >
           {{ link.label }}
-        </a>
+        </RouterLink>
         <ThemeToggle />
       </nav>
 
@@ -57,15 +57,15 @@ const links = computed(() => [
       aria-label="Mobile navigation"
     >
       <div class="flex flex-col gap-4">
-        <a
+        <RouterLink
           v-for="link in links"
-          :key="link.to"
-          :href="link.to"
+          :key="link.label"
+          :to="link.to"
           class="nav-link"
           @click="isOpen = false"
         >
           {{ link.label }}
-        </a>
+        </RouterLink>
       </div>
     </nav>
   </header>

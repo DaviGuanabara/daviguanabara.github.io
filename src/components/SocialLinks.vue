@@ -24,7 +24,7 @@ const resolveHref = (href: string) => {
 
   if (href.startsWith("/")) {
     const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
-    return `${baseUrl}${href}`;
+    return `${baseUrl}/#${href}`;
   }
 
   return href;

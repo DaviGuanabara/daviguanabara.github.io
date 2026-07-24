@@ -5,8 +5,16 @@
     <title>Redirecting...</title>
     <script>
       const basePath = "/davi-guanabara.github.io/";
-      sessionStorage.redirect = location.href;
-      location.replace(basePath);
+      const currentUrl = new URL(location.href);
+      const relativePath = currentUrl.pathname.startsWith(basePath)
+        ? currentUrl.pathname.slice(basePath.length)
+        : "";
+
+      const target = relativePath
+        ? `${basePath}#/${relativePath}${currentUrl.search}`
+        : `${basePath}`;
+
+      location.replace(target);
     </script>
   </head>
   <body></body>

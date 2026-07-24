@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import ProjectDetailView from "@/views/ProjectDetailView.vue";
 import ResumeView from "@/views/ResumeView.vue";
@@ -36,9 +36,22 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior() {
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+
+    const section = typeof to.query.section === "string" ? to.query.section : undefined;
+    if (section) {
+      return {
+        el: `#${section}`,
+        top: 24,
+        behavior: "smooth"
+      };
+    }
+
     return { top: 0, behavior: "smooth" };
   }
 });
