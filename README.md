@@ -22,3 +22,11 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## GitHub Pages
+
+This repository deploys with GitHub Actions.
+
+- Every push to `main` runs the production build
+- The generated `dist/` folder is uploaded as the Pages artifact
+- GitHub Pages should be configured to use `GitHub Actions` as its source
