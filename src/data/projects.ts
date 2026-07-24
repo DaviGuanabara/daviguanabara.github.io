@@ -82,8 +82,7 @@ export const projects: Project[] = [
       { label: "Paper", href: "https://doi.org/10.1109/SBR/WRE63066.2024.10837749" },
       { label: "Publication", href: "https://doi.org/10.1007/s10846-026-02415-8" }
     ],
-    image:
-      "https://raw.githubusercontent.com/DaviGuanabara/dronechase/main/src/threatsense/level5/components/tasks_management/tasks/level5_task.svg",
+    image: "/images/projects/dronechase/architecture.svg",
     screenshots: []
   },
   {
@@ -112,11 +111,10 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/DaviGuanabara/OndeVale" },
       { label: "Documentation", href: "https://github.com/DaviGuanabara/OndeVale/blob/main/README.md" }
     ],
-    image:
-      "https://raw.githubusercontent.com/DaviGuanabara/OndeVale/main/artifacts/stats/geographic_distribution.png",
+    image: "/images/projects/ondevale/cover.png",
     screenshots: [
-      "https://raw.githubusercontent.com/DaviGuanabara/OndeVale/main/artifacts/stats/price_histogram.png",
-      "https://raw.githubusercontent.com/DaviGuanabara/OndeVale/main/artifacts/stats/price_m2_histogram.png"
+      "/images/projects/ondevale/price-histogram.png",
+      "/images/projects/ondevale/price-m2-histogram.png"
     ]
   },
   {
@@ -185,8 +183,7 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/DaviGuanabara/wildfire_pyro" },
       { label: "Documentation", href: "https://github.com/DaviGuanabara/wildfire_pyro/blob/main/README.md" }
     ],
-    image:
-      "https://raw.githubusercontent.com/DaviGuanabara/wildfire_pyro/main/src/wildfire_pyro/models/figures/neural_network_architecture.png",
+    image: "/images/projects/wildfire/architecture.png",
     screenshots: []
   }
 ];

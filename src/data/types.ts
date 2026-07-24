@@ -49,6 +49,7 @@ export type Publication = {
 export type Education = {
   degree: string;
   institution: string;
+  url?: string;
   period: string;
   details: string;
 };
