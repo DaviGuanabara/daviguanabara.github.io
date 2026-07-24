@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      const basePath = "/davi-guanabara.github.io/";
+      const currentUrl = new URL(location.href);
+      const relativePath = currentUrl.pathname.startsWith(basePath)
+        ? currentUrl.pathname.slice(basePath.length)
+        : "";
+
+      const target = relativePath
+        ? `${basePath}#/${relativePath}${currentUrl.search}`
+        : `${basePath}`;
+
+      location.replace(target);
+    </script>
+  </head>
+  <body></body>
+</html>

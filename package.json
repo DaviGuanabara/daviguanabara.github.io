@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite --open /app.html",
+    "build": "vue-tsc --noEmit && vite build && cp dist/app.html dist/index.html && npm run sync:pages",
     "preview": "vite preview"
+    ,
+    "sync:pages": "mkdir -p assets images && cp -R dist/assets/. assets/ && if [ -d dist/images ]; then cp -R dist/images/. images/; fi && cp dist/404.html . && cp dist/og-cover.svg . && cp dist/robots.txt . && cp dist/sitemap.xml ."
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
