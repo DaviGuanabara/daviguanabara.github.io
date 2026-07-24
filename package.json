@@ -8,7 +8,7 @@
     "generate:resumes": "tsx scripts/generate-resumes.ts",
     "build": "vue-tsc --noEmit && npm run generate:resumes && vite build && cp dist/app.html dist/index.html && npm run sync:pages",
     "preview": "vite preview",
-    "sync:pages": "rm -rf assets images documents && mkdir -p assets images documents && cp -R dist/assets/. assets/ && if [ -d dist/images ]; then cp -R dist/images/. images/; fi && if [ -d dist/documents ]; then cp -R dist/documents/. documents/; fi && cp dist/index.html . && cp dist/404.html . && cp dist/og-cover.svg . && cp dist/robots.txt . && cp dist/sitemap.xml ."
+    "sync:pages": "rm -rf assets images documents davi-guanabara.github.io && mkdir -p assets images documents davi-guanabara.github.io/assets davi-guanabara.github.io/images davi-guanabara.github.io/documents && cp -R dist/assets/. assets/ && cp -R dist/assets/. davi-guanabara.github.io/assets/ && if [ -d dist/images ]; then cp -R dist/images/. images/ && cp -R dist/images/. davi-guanabara.github.io/images/; fi && if [ -d dist/documents ]; then cp -R dist/documents/. documents/ && cp -R dist/documents/. davi-guanabara.github.io/documents/; fi && cp dist/index.html . && cp dist/index.html davi-guanabara.github.io/index.html && cp dist/404.html . && cp dist/404.html davi-guanabara.github.io/404.html && cp dist/og-cover.svg . && cp dist/og-cover.svg davi-guanabara.github.io/og-cover.svg && cp dist/robots.txt . && cp dist/robots.txt davi-guanabara.github.io/robots.txt && cp dist/sitemap.xml . && cp dist/sitemap.xml davi-guanabara.github.io/sitemap.xml"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
