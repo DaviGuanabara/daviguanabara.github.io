@@ -51,7 +51,8 @@ defineProps<{
       :src="resolveAssetPath(project.image)"
       :alt="`${project.title} preview`"
       class="w-full rounded-2xl border border-slate-200/80 bg-slate-100 object-cover dark:border-slate-800/80 dark:bg-slate-900"
-      loading="lazy"
+      loading="eager"
+      decoding="async"
     />
     <div
       v-else
