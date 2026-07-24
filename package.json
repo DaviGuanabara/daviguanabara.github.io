@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open /app.html",
-    "build": "vue-tsc --noEmit && vite build && cp dist/app.html dist/index.html && npm run sync:pages",
-    "preview": "vite preview"
-    ,
-    "sync:pages": "mkdir -p assets images documents && cp -R dist/assets/. assets/ && if [ -d dist/images ]; then cp -R dist/images/. images/; fi && if [ -d dist/documents ]; then cp -R dist/documents/. documents/; fi && cp dist/index.html . && cp dist/404.html . && cp dist/og-cover.svg . && cp dist/robots.txt . && cp dist/sitemap.xml ."
+    "generate:resumes": "tsx scripts/generate-resumes.ts",
+    "build": "vue-tsc --noEmit && npm run generate:resumes && vite build && cp dist/app.html dist/index.html && npm run sync:pages",
+    "preview": "vite preview",
+    "sync:pages": "rm -rf assets images documents && mkdir -p assets images documents && cp -R dist/assets/. assets/ && if [ -d dist/images ]; then cp -R dist/images/. images/; fi && if [ -d dist/documents ]; then cp -R dist/documents/. documents/; fi && cp dist/index.html . && cp dist/404.html . && cp dist/og-cover.svg . && cp dist/robots.txt . && cp dist/sitemap.xml ."
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.10",
+    "tsx": "^4.23.1",
     "typescript": "^5.8.3",
     "vite": "^7.0.4",
     "vue-tsc": "^3.0.3"

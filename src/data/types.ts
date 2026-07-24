@@ -1,70 +1,80 @@
+import type { Localized, LocalizedString } from "@/i18n/schema";
+
 export type SocialLink = {
-  label: string;
+  label: LocalizedString;
   href: string;
 };
 
 export type Profile = {
-  name: string;
-  roles: string[];
-  headline: string;
-  summary: string;
-  location: string;
+  fullName: string;
+  givenName: string;
+  familyName: string;
+  roles: Localized<string[]>;
+  headline: LocalizedString;
+  summary: LocalizedString;
+  location: LocalizedString;
+  email: string;
+  phone: string;
+  github: string;
+  linkedin: string;
+  lattes: string;
+  orcid: string;
+  scholar: string;
+  address: LocalizedString;
+  citizenship: LocalizedString;
+  languages: LocalizedString;
+  resumeProfile: LocalizedString;
+  skills: Localized<string[]>;
+  interests: LocalizedString;
   socials: SocialLink[];
 };
 
 export type ProjectLink = {
-  type:
-  | "github"
-  | "demo"
-  | "paper"
-  | "documentation"
-  | "video"
-  | "slides";
-
-  label: string;
+  type: "github" | "demo" | "paper" | "documentation" | "video" | "slides";
+  label: LocalizedString;
   href: string;
 };
 
 export type Project = {
   slug: string;
-  title: string;
-  summary: string;
-  motivation?: string;
-  problem?: string;
-  architecture?: string;
-  engineeringDecisions?: string[];
-  lessonsLearned?: string[];
-  technologies: string[];
+  title: LocalizedString;
+  summary: LocalizedString;
+  motivation?: LocalizedString;
+  problem?: LocalizedString;
+  architecture?: LocalizedString;
+  engineeringDecisions?: Localized<string[]>;
+  lessonsLearned?: Localized<string[]>;
+  technologies: Localized<string[]>;
   links: ProjectLink[];
   image?: string;
   architectureDiagram?: string;
   screenshots: string[];
-  publication?: string;
+  publication?: LocalizedString;
 };
 
 export type Publication = {
-  title: string;
-  venue: string;
+  title: LocalizedString;
+  venue: LocalizedString;
   year: string;
-  authors: string;
-  abstract: string;
-  citation: string;
+  authors: LocalizedString;
+  abstract: LocalizedString;
+  citation: LocalizedString;
   doi: string;
   scholar: string;
   orcid: string;
 };
 
 export type Education = {
-  degree: string;
-  institution: string;
+  degree: LocalizedString;
+  institution: LocalizedString;
   url?: string;
-  period: string;
-  details: string;
+  period: LocalizedString;
+  details: LocalizedString;
 };
 
 export type Award = {
   year: string;
-  title: string;
-  distinction: string;
-  organization: string;
+  title: LocalizedString;
+  distinction: LocalizedString;
+  organization: LocalizedString;
 };

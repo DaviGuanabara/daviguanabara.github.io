@@ -6,16 +6,20 @@ const STORAGE_KEY = "theme";
 const theme = ref<Theme>("dark");
 const initialized = ref(false);
 
+export const initializeTheme = () => {
+  if (initialized.value || typeof window === "undefined") {
+    return;
+  }
+
+  const savedTheme = window.localStorage.getItem(STORAGE_KEY) as Theme | null;
+  theme.value = savedTheme ?? "dark";
+  document.documentElement.classList.toggle("dark", theme.value === "dark");
+  initialized.value = true;
+};
+
 export function useTheme() {
   onMounted(() => {
-    if (initialized.value) {
-      return;
-    }
-
-    const savedTheme = localStorage.getItem(STORAGE_KEY) as Theme | null;
-    theme.value = savedTheme ?? "dark";
-    document.documentElement.classList.toggle("dark", theme.value === "dark");
-    initialized.value = true;
+    initializeTheme();
   });
 
   watch(

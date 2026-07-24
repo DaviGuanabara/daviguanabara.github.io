@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import type { RouteLocationRaw } from "vue-router";
+import { useI18n } from "@/composables/useI18n";
+import LanguageSwitcher from "./LanguageSwitcher.vue";
 import ThemeToggle from "./ThemeToggle.vue";
 
 const isOpen = ref(false);
+const { messages } = useI18n();
 
-const links: Array<{ label: string; to: RouteLocationRaw }> = [
-  { label: "Projects", to: { path: "/", query: { section: "projects" } } },
-  { label: "Publications", to: { path: "/", query: { section: "publications" } } },
-  { label: "Education", to: { path: "/", query: { section: "education" } } },
-  { label: "Awards", to: { path: "/", query: { section: "awards" } } },
-  { label: "Contact", to: { path: "/", query: { section: "contact" } } }
-];
+const links = computed<Array<{ label: string; to: RouteLocationRaw }>>(() => [
+  { label: messages.value.nav.projects, to: { path: "/", query: { section: "projects" } } },
+  { label: messages.value.nav.publications, to: { path: "/", query: { section: "publications" } } },
+  { label: messages.value.nav.education, to: { path: "/", query: { section: "education" } } },
+  { label: messages.value.nav.awards, to: { path: "/", query: { section: "awards" } } },
+  { label: messages.value.nav.contact, to: { path: "/", query: { section: "contact" } } }
+]);
 </script>
 
 <template>
@@ -33,10 +36,12 @@ const links: Array<{ label: string; to: RouteLocationRaw }> = [
         >
           {{ link.label }}
         </RouterLink>
+        <LanguageSwitcher />
         <ThemeToggle />
       </nav>
 
       <div class="flex items-center gap-3 md:hidden">
+        <LanguageSwitcher />
         <ThemeToggle />
         <button
           type="button"
