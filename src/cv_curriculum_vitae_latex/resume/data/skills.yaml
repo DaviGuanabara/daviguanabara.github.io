@@ -1,0 +1,30 @@
+groups:
+  - id: programming
+    title:
+      pt: Programacao
+      en: Programming
+    items:
+      - Python
+      - PyTorch
+  - id: machine_learning
+    title:
+      pt: Aprendizado de maquina
+      en: Machine learning
+    items:
+      - pt: Aprendizado por reforco
+        en: Reinforcement learning
+      - pt: Aprendizado supervisionado
+        en: Supervised learning
+      - pt: Aprendizado profundo
+        en: Deep learning
+  - id: simulation
+    title:
+      pt: Simulacao e sistemas
+      en: Simulation and systems
+    items:
+      - pt: Modelagem e experimentacao em ambientes simulados
+        en: Modeling and experimentation in simulated environments
+      - pt: Sistemas multiagente
+        en: Multi-agent systems
+      - pt: Tomada de decisao sob incerteza
+        en: Decision-making under uncertainty

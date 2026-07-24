@@ -1,0 +1,29 @@
+\documentclass[10pt,a4paper]{article}
+\input{cover_letter/styles/letter.sty}
+
+\LetterName{ {{- company.sender.name | tex -}} }
+\LetterTitle{ {{- company.sender.title | tex -}} }
+\LetterEmail{ {{- company.sender.email | tex -}} }
+\LetterPhone{ {{- company.sender.phone | tex -}} }
+\LetterLocation{ {{- company.sender.location | tex -}} }
+\LetterLinks{
+  \href{ {{- company.sender.github_url -}} }{ {{- company.sender.github_label | tex -}} }
+  \LetterContactSep
+  \href{ {{- company.sender.linkedin_url -}} }{ {{- company.sender.linkedin_label | tex -}} }
+}
+\LetterDate{ {{- rendered_date | tex -}} }
+\LetterCompanyLine{ {{- company.company_name | tex -}}{% if company.company_unit %} --- {{- company.company_unit | tex -}}{% endif %} }
+
+\begin{document}
+\LetterMakeHeader
+
+\LetterSalutation{ {{- salutation | tex -}} }
+
+{% for paragraph in body_paragraphs %}
+\LetterParagraph{ {{- paragraph | tex -}} }
+{% endfor %}
+
+\LetterClosing{ {{- closing | tex -}} }
+\LetterSignature{ {{- signature | tex -}} }
+
+\end{document}

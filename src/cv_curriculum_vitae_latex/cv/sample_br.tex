@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.4, 30 July 2025) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+% Layout and typography
+\geometry{left=1.35cm,right=1.35cm,top=1.35cm,bottom=1.35cm}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = *}
+
+% Restrained aerospace-inspired palette
+\definecolor{ResumeText}{HTML}{111827}
+\definecolor{ResumeMuted}{HTML}{4B5563}
+\definecolor{ResumeAccent}{HTML}{163A5F}
+\definecolor{ResumeRule}{HTML}{CBD5E1}
+\colorlet{name}{ResumeText}
+\colorlet{tagline}{ResumeAccent}
+\colorlet{heading}{ResumeAccent}
+\colorlet{headingrule}{ResumeRule}
+\colorlet{subheading}{ResumeText}
+\colorlet{accent}{ResumeAccent}
+\colorlet{emphasis}{ResumeText}
+\colorlet{body}{ResumeMuted}
+
+\renewcommand{\namefont}{\Huge\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\large\bfseries}
+\renewcommand{\cvsubsectionfont}{\normalsize\bfseries}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\AtBeginEnvironment{itemize}{\small}
+
+% Local helpers for a one-column ATS-friendly layout
+\newcommand{\contactsep}{\enspace\textbar\enspace}
+\newcommand{\resumesection}[1]{%
+  \cvsection{#1}\vspace{-0.45\baselineskip}%
+}
+\newcommand{\resumeentry}[4]{%
+  \textbf{#1}%
+  \ifstrempty{#3}{}{ {\small\color{emphasis}(#3)}}%
+  \par
+  \ifstrempty{#2}{}{%
+    {\emph{#2}}%
+    \ifstrempty{#4}{}{%
+      \hfill{\small\color{emphasis}#4}%
+    }%
+    \par
+  }%
+}
+\newcommand{\skillgroup}[2]{%
+  \textbf{#1}: #2\par
+}
+
+\begin{document}
+
+% TODO: Confirm whether the candidate wants to keep the full Lattes URL in the header or move it to a shorter link label.
+% TODO: Confirm whether the MBA should remain if the resume is later tightened further for one-page submissions.
+% TODO: Confirm whether graph attention should remain attributed to the Loyal Wingmen project in all target applications, or only when the 2026 journal article is cited.
+
+{\namefont\color{name} Davi Guanabara Arag\~ao\par}
+{\large\bfseries\color{tagline} Engenheiro de Intelig\^encia Artificial e Aprendizado de M\'aquina (AI/ML) \textbar{} Pesquisador de Doutorado em Sistemas Aut\^onomos e Ci\^encia de Dados\par}
+\vspace{0.35em}
+{\small
+S\~ao Paulo, Brasil\contactsep
+\href{mailto:davi\_guanabara@live.com}{davi\_guanabara@live.com}\contactsep
++55 85 9 8673-6026\contactsep
+\href{https://github.com/DaviGuanabara}{github.com/DaviGuanabara}\contactsep
+\href{https://linkedin.com/in/davi-guanabara}{linkedin.com/in/davi-guanabara}\contactsep
+\href{http://lattes.cnpq.br/2180140366316472}{lattes.cnpq.br/2180140366316472}\par
+}
+\vspace{0.55em}
+
+\resumesection{Resumo Profissional}
+
+Engenheiro de Intelig\^encia Artificial e Aprendizado de M\'aquina (AI/ML) e pesquisador de doutorado no Instituto Tecnol\'ogico de Aeron\'autica (ITA), atuando na aplica\c{c}\~ao de intelig\^encia artificial, aprendizado de m\'aquina e engenharia de software a sistemas aut\^onomos, computa\c{c}\~ao geoespacial e aplica\c{c}\~oes aeroespaciais. Atualmente contribui para iniciativas de pesquisa em colabora\c{c}\~ao com o SAC/ICEA, desenvolvendo m\'etodos computacionais para planejamento de espa\c{c}o a\'ereo urbano, tomada de decis\~ao inteligente e experimenta\c{c}\~ao baseada em simula\c{c}\~ao. Seus interesses de pesquisa concentram-se em aprendizado por refor\c{c}o, sistemas multiagentes, IA geoespacial e desenvolvimento de software cient\'ifico reprodut\'ivel para problemas complexos de engenharia.
+
+\medskip
+\resumesection{\'Areas de Especializa\c{c}\~ao}
+
+\skillgroup{Sistemas Aut\^onomos}{
+Tomada de Decis\~ao Aut\^onoma • Sistemas Multiagentes • Sistemas Aut\^onomos com UAVs
+}
+
+\skillgroup{Aprendizado de M\'aquina}{
+Deep Learning • Aprendizado por Refor\c{c}o • Modelos Baseados em Aten\c{c}\~ao
+}
+
+\skillgroup{Engenharia de Software}{
+Sistemas Reativos • Plataformas Experimentais
+}
+
+\skillgroup{Computa\c{c}\~ao Geoespacial}{
+Modelagem Geoespacial • Modelagem Espa\c{c}o-Temporal
+}
+
+\medskip
+\resumesection{Projetos Selecionados}
+
+\resumeentry{Deep Reinforcement Learning with Graph Attention for Cooperative Loyal Wingmen}
+{Programa de Pesquisa CTEDS | Brasil-Suécia ADS (Air Domain Study)}
+{2024--2026}{}
+
+\begin{itemize} 
+
+\item Desenvolveu um framework de deep reinforcement learning para tomada de decis\~ao cooperativa de engajamento de amea\c{c}as em Loyal Wingmen UAVs operando sob observa\c{c}\~oes espa\c{c}o-temporais compartilhadas.
+
+\item Prop\^os uma arquitetura neural com graph attention que permite compartilhamento adaptativo de informa\c{c}\~oes e aprendizado coordenado de pol\'iticas sob observabilidade parcial.
+
+\item Projetou e avaliou experimentos baseados em simula\c{c}\~ao integrando Graph Neural Networks com multi-agent reinforcement learning para sistemas a\'ereos aut\^onomos.
+
+\item Desenvolvido no \^ambito do Cooperative Threat Engagement with Heterogeneous Drone Swarms (CTEDS) research program, uma colabora\c{c}\~ao internacional Brasil--Su\'ecia envolvendo governo, academia e ind\'ustria.
+
+\item Resultou em duas publica\c{c}\~oes com revis\~ao por pares:
+
+      \emph{Journal of Intelligent \& Robotic Systems} (Springer Nature, 2026, DOI:\href{https://doi.org/10.1007/s10846-026-02415-8}{10.1007/s10846-026-02415-8}) e \emph{2024 Brazilian Symposium on Robotics (SBR) and Workshop on Robotics in Education}(DOI:\href{https://doi.org/10.1109/SBR/WRE63066.2024.10837749}{10.1109/SBR/WRE63066.2024.10837749}).
+\end{itemize}
+
+\resumeentry{SkyWeaver — Plataforma para Configuração Dinâmica do Espaço Aéreo para o BRUTM}
+{Projeto de pesquisa em colabora\c{c}\~ao com SAC/ICEA}
+{2025--Present}{}
+
+\begin{itemize}
+\item Projetou uma arquitetura reativa para Dynamic Airspace Configuration com o objetivo de contribuir para o conceito brasileiro de UTM (BRUTM).
+\item Desenvolveu componentes modulares de software para gera\c{c}\~ao de cen\'arios geoespaciais, gerenciamento de estado operacional, roteamento e modelagem de infraestrutura de espa\c{c}o a\'ereo.
+\item Investiga m\'etodos de otimiza\c{c}\~ao baseados em grafos para posicionamento de droneports, planejamento de rotas e provis\~ao de infraestrutura sob restri\c{c}\~oes operacionais.
+\item A pesquisa em andamento explora t\'ecnicas de engenharia de software, otimiza\c{c}\~ao e IA para futuras opera\c{c}\~oes de UTM, U-Space e Advanced Air Mobility (AAM).
+\end{itemize}
+
+\resumeentry{OndeVale — Plataforma Inteligente para Avaliação de Imóveis}{Sistema de IA Implantado em Nuvem}{2025}{}
+\begin{itemize}
+\item Desenvolveu uma plataforma implantada em nuvem para avalia\c{c}\~ao de im\'oveis residenciais, combinando an\'alise geoespacial, machine learning e visualiza\c{c}\~ao web interativa.
+\item Projetou o pipeline completo de machine learning, incluindo pr\'e-processamento de dados, feature engineering, treinamento de modelos, servi\c{c}os de infer\^encia e implanta\c{c}\~ao.
+\item Construiu um backend em FastAPI e um frontend em Vue.js integrando visualiza\c{c}\~ao GIS com infer\^encia de modelo em tempo real.
+\item Implantou a aplica\c{c}\~ao como um servi\c{c}o em nuvem acess\'ivel publicamente, conectando pr\'e-processamento de dados, infer\^encia de modelos, uma REST API e uma interface geoespacial interativa.
+\end{itemize}
+
+\resumeentry{Framework Reprodutível para Aprendizado Supervisionado:
+Estudo de Caso em Previsão de Umidade Foliar}{}{2024--2025}{}
+\begin{itemize}
+\item Desenvolveu um modelo de deep learning para previs\~ao de umidade foliar em vinhedos com base em observa\c{c}\~oes meteorol\'ogicas do Iowa Environmental Mesonet.
+\item Projetou uma arquitetura Deep Sets permutation-invariant com masked attention para modelar vizinhan\c{c}as espa\c{c}o-temporais heterog\^eneas.
+\item Construiu um framework reprodut\'ivel de aprendizado supervisionado integrando stochastic contextual sampling, Bayesian hyperparameter optimization, bootstrap evaluation e gerenciamento determin\'istico de seeds.
+\end{itemize}
+
+\medskip
+\resumesection{Forma\c{c}\~ao Acad\^emica}
+\resumeentry{Doutorado em Engenharia Eletrônica e Computação (Informática)}{Instituto Tecnol\'ogico de Aeron\'autica (ITA)}{2025--Present}{}
+\resumeentry{Especialização em Ciência de Dados (CEDS)}{Instituto Tecnol\'ogico de Aeron\'autica (ITA)}{2024--2026}{}
+\resumeentry{Mestrado em Computação Aeronáutica (MPCOMP)}{Instituto Tecnol\'ogico de Aeron\'autica (ITA)}{2021--2024}{}
+\resumeentry{Bacharelado em Engenharia de Controle e Automação}{Universidade de Fortaleza (UNIFOR)}{2013--2019}{}
+
+
+
+\end{document}

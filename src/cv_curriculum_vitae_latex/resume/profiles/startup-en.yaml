@@ -1,0 +1,21 @@
+id: startup-en
+language: en
+layout: ats-onecol
+theme: clean
+output_name: davi_aragao_startup_en
+title:
+  en: Startup engineering resume
+sections:
+  - type: experience
+    ids:
+      - wildfire-framework
+      - ai-research-engineering
+      - threatsense-threatengage
+  - type: projects
+    ids:
+      - wildfire-ai-framework
+      - threatsense
+      - loyal-wingmen-rl
+  - type: skills
+  - type: education
+  - type: links

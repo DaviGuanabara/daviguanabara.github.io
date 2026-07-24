@@ -1,0 +1,15 @@
+company_name: Lockheed Martin
+company_unit: Artificial Intelligence Center
+output_name: lockheed-martin
+date: July 16, 2026
+body_file: master_lockheed.md
+sender:
+  name: Davi Guanabara Aragão
+  title: AI/ML Engineer and Ph.D. Researcher in Autonomous Systems
+  email: davi_guanabara@live.com
+  phone: "+55 85 9 8673-6026"
+  location: São Paulo, Brazil
+  github_url: https://github.com/DaviGuanabara
+  github_label: github.com/DaviGuanabara
+  linkedin_url: https://linkedin.com/in/davi-guanabara
+  linkedin_label: linkedin.com/in/davi-guanabara

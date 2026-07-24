@@ -1,0 +1,14 @@
+document:
+  language: pt-BR
+  babel: brazil
+labels:
+  contact: Contato
+  location: Localizacao
+  date: Periodo
+  section_experience: Experiencia
+  section_projects: Projetos selecionados
+  section_education: Formacao academica
+  section_skills: Competencias tecnicas
+  section_links: Links
+  section_languages: Idiomas
+  current: presente

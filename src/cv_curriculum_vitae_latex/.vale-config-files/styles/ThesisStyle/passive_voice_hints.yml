@@ -1,0 +1,7 @@
+extends: existence
+message: "This structure often leads to passive/weak phrasing. Consider active voice (e.g., 'We propose/show/derive...')."
+level: suggestion
+ignorecase: true
+
+tokens:
+  - '\bit is (proposed|shown|demonstrated|presented|discussed|derived)\b'

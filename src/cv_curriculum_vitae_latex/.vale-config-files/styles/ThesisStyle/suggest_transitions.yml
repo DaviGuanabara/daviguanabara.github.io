@@ -1,0 +1,23 @@
+extends: substitution
+message: "Consider varying this transition. Alternatives: '%s'."
+level: suggestion
+ignorecase: true
+
+swap:
+  # Addition
+  '\bAdditionally\b': 'Moreover|Furthermore|In addition|Also|Notably'
+  '\bAlso\b': 'Moreover|Furthermore|In addition|Additionally|Notably'
+  '\bFurthermore\b': 'Moreover|In addition|Additionally|Notably'
+
+  # Consequence
+  '\bTherefore\b': 'Consequently|As a result|Hence|Thus|Accordingly'
+  '\bThus\b': 'Therefore|Consequently|As a result|Hence|Accordingly'
+  '\bAs a result\b': 'Consequently|Therefore|Hence|Thus|Accordingly'
+
+  # Specification
+  '\bIn particular\b': 'More specifically|More precisely|Concretely|In this context'
+  '\bFor example\b': 'For instance|To illustrate|As an example'
+
+  # Contrast
+  '\bHowever\b': 'Nevertheless|Yet|In contrast|By contrast'
+  '\bNevertheless\b': 'However|Yet|In contrast|By contrast'

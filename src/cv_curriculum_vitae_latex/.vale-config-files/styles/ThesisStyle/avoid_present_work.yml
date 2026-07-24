@@ -1,0 +1,9 @@
+extends: existence
+message: "Avoid '%s'. Use 'this study' or 'this work' instead."
+level: warning
+tokens:
+  - the present work
+  - this present work
+  - the present study
+  - o presente trabalho
+  - o presente estudo

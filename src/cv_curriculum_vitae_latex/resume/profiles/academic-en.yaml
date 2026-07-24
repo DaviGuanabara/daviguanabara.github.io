@@ -1,0 +1,26 @@
+id: academic-en
+language: en
+layout: ats-onecol
+theme: clean
+output_name: davi_aragao_academic_en
+title:
+  en: Academic CV
+sections:
+  - type: education
+    ids:
+      - ita-phd
+      - ita-data-science
+      - ita-prof-master
+      - fgv-mba-management
+      - unifor-control-automation
+  - type: experience
+    ids:
+      - ai-research-engineering
+      - wildfire-framework
+      - threatsense-threatengage
+  - type: projects
+    ids:
+      - wildfire-ai-framework
+      - loyal-wingmen-rl
+  - type: skills
+  - type: links

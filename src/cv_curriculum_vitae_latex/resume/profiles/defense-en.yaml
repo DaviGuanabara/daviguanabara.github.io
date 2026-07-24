@@ -1,0 +1,21 @@
+id: defense-en
+language: en
+layout: ats-onecol
+theme: clean
+output_name: davi_aragao_defense_en
+title:
+  en: Defense systems resume
+sections:
+  - type: experience
+    ids:
+      - ai-research-engineering
+      - threatsense-threatengage
+      - wildfire-framework
+  - type: projects
+    ids:
+      - loyal-wingmen-rl
+      - threatsense
+      - airspace-management-uav
+  - type: skills
+  - type: education
+  - type: links

@@ -1,0 +1,61 @@
+items:
+  - id: unifor-control-automation
+    degree:
+      pt: Graduacao em Engenharia de Controle e Automacao
+      en: B.S. in Control and Automation Engineering
+    institution:
+      pt: Universidade de Fortaleza (UNIFOR)
+      en: University of Fortaleza (UNIFOR)
+    start: "2013"
+    end: "2019"
+  - id: fgv-mba-management
+    degree:
+      pt: MBA em Gestao Empresarial
+      en: MBA in Business Management
+    institution:
+      pt: Fundacao Getulio Vargas (FGV)
+      en: Fundacao Getulio Vargas (FGV)
+    start: "2019"
+    end: "2021"
+  - id: ita-prof-master
+    degree:
+      pt: Mestrado Profissional em Computacao Aeronautica
+      en: Professional M.S. in Aeronautical Computing
+    institution:
+      pt: Instituto Tecnologico de Aeronautica (ITA)
+      en: Aeronautics Institute of Technology (ITA)
+    start: "2021"
+    end: "2024"
+    details:
+      pt:
+        - Inteligencia Artificial, simulacao e sistemas de tomada de decisao.
+      en:
+        - Artificial intelligence, simulation, and decision-making systems.
+  - id: ita-data-science
+    degree:
+      pt: Especializacao em Ciencia de Dados
+      en: Graduate Specialization in Data Science
+    institution:
+      pt: Instituto Tecnologico de Aeronautica (ITA)
+      en: Aeronautics Institute of Technology (ITA)
+    start: "2024"
+    end: "2026"
+    details:
+      pt:
+        - Aprendizado de maquina, estatistica e analise de dados.
+      en:
+        - Machine learning, statistics, and data analysis.
+  - id: ita-phd
+    degree:
+      pt: Doutorado em Engenharia Eletronica e Computacao
+      en: Ph.D. in Electronic Engineering and Computing
+    institution:
+      pt: Instituto Tecnologico de Aeronautica (ITA)
+      en: Aeronautics Institute of Technology (ITA)
+    start: "2025"
+    end: present
+    details:
+      pt:
+        - Sistemas inteligentes, simulacao e tomada de decisao em sistemas autonomos.
+      en:
+        - Intelligent systems, simulation, and decision-making in autonomous systems.

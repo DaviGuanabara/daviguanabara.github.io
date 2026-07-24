@@ -1,0 +1,77 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesFile{letter.sty}[2026/07/16 Cover Letter System style]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[margin=1.35cm]{geometry}
+\RequirePackage[defaultsans]{lato}
+\RequirePackage[rm]{roboto}
+\RequirePackage{microtype}
+\RequirePackage{xcolor}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{ragged2e}
+\RequirePackage{parskip}
+
+\renewcommand{\familydefault}{\sfdefault}
+\DisableLigatures{encoding = *, family = *}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+\definecolor{LetterText}{HTML}{111827}
+\definecolor{LetterMuted}{HTML}{4B5563}
+\definecolor{LetterAccent}{HTML}{163A5F}
+\definecolor{LetterRule}{HTML}{CBD5E1}
+
+\color{LetterText}
+
+\newcommand{\LetterName}[1]{\def\StoredLetterName{#1}}
+\newcommand{\LetterTitle}[1]{\def\StoredLetterTitle{#1}}
+\newcommand{\LetterEmail}[1]{\def\StoredLetterEmail{#1}}
+\newcommand{\LetterPhone}[1]{\def\StoredLetterPhone{#1}}
+\newcommand{\LetterLocation}[1]{\def\StoredLetterLocation{#1}}
+\newcommand{\LetterLinks}[1]{\def\StoredLetterLinks{#1}}
+\newcommand{\LetterDate}[1]{\def\StoredLetterDate{#1}}
+\newcommand{\LetterCompanyLine}[1]{\def\StoredLetterCompanyLine{#1}}
+\newcommand{\LetterContactSep}{\enspace\textbar\enspace}
+
+\newcommand{\LetterMakeHeader}{%
+  {\Huge\bfseries\color{LetterText}\StoredLetterName\par}%
+  \vspace{0.22em}%
+  {\large\bfseries\color{LetterAccent}\StoredLetterTitle\par}%
+  \vspace{0.4em}%
+  {\small\color{LetterMuted}%
+    \StoredLetterLocation\LetterContactSep
+    \StoredLetterEmail\LetterContactSep
+    \StoredLetterPhone\par
+  }%
+  {\small\color{LetterMuted}\StoredLetterLinks\par}%
+  \vspace{0.65em}%
+  \hrule height 0.5pt\relax
+  \vspace{0.7em}%
+  {\small\color{LetterMuted}\StoredLetterDate\par}%
+  \vspace{0.15em}%
+  {\small\color{LetterText}\StoredLetterCompanyLine\par}%
+  \vspace{0.85em}%
+}
+
+\newcommand{\LetterSalutation}[1]{%
+  {\normalsize #1\par}%
+  \vspace{0.7em}%
+}
+
+\newcommand{\LetterParagraph}[1]{%
+  \justifying\small #1\par
+  \vspace{0.7em}%
+}
+
+\newcommand{\LetterClosing}[1]{%
+  \vspace{0.15em}%
+  {\small #1\par}%
+  \vspace{1.0em}%
+}
+
+\newcommand{\LetterSignature}[1]{%
+  {\small\bfseries #1\par}%
+}

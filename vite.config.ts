@@ -9,7 +9,7 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url))
     }
   },
-  base: "/davi-guanabara.github.io/",
+  base: "/",
   build: {
     rollupOptions: {
       input: {

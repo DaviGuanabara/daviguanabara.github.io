@@ -1,0 +1,7 @@
+extends: existence
+message: "Avoid using '%s'. Reserve 'objective' only for the formal thesis goal section."
+level: warning
+tokens:
+  - objective
+  - objectives
+  - objetivo

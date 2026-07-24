@@ -1,0 +1,27 @@
+full_name: Davi Guanabara Aragao
+display_name: Davi Guanabara Aragao
+email: davi_guanabara@live.com
+phone: "+55 85 9 8673-6026"
+location:
+  pt: "Sao Paulo, Brasil"
+  en: "Sao Paulo, Brazil"
+citizenship:
+  pt: Brasileiro
+  en: Brazilian
+links:
+  - label: GitHub
+    value: github.com/DaviGuanabara
+    url: https://github.com/DaviGuanabara
+  - label: LinkedIn
+    value: linkedin.com/in/davi-guanabara
+    url: https://linkedin.com/in/davi-guanabara
+  - label: Lattes
+    value: lattes.cnpq.br/2180140366316472
+    url: http://lattes.cnpq.br/2180140366316472
+languages:
+  - name:
+      pt: Ingles
+      en: English
+    level:
+      pt: "CEFR B2, DET score: 115"
+      en: "CEFR B2, DET score: 115"

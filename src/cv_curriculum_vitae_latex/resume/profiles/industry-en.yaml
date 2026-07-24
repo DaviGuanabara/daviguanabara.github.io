@@ -1,0 +1,29 @@
+id: industry-en
+language: en
+layout: ats-onecol
+theme: clean
+output_name: davi_aragao_industry_en
+title:
+  pt: Curriculo tecnico
+  en: Technical resume
+sections:
+  - type: experience
+    ids:
+      - ai-research-engineering
+      - wildfire-framework
+      - threatsense-threatengage
+  - type: projects
+    ids:
+      - loyal-wingmen-rl
+      - threatsense
+      - wildfire-ai-framework
+  - type: education
+    ids:
+      - ita-phd
+      - ita-data-science
+      - ita-prof-master
+      - fgv-mba-management
+      - unifor-control-automation
+  - type: skills
+  - type: links
+  - type: languages

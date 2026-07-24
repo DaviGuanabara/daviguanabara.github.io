@@ -1,0 +1,9 @@
+extends: existence
+message: "Avoid '%s'. Prefer evaluate, assess, test, or analyze."
+level: warning
+tokens:
+  - validate
+  - validates
+  - validated
+  - validation
+  - validar

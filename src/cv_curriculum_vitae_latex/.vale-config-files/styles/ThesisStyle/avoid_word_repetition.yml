@@ -1,0 +1,4 @@
+extends: repetition
+message: "Repeated word '%s'."
+level: suggestion
+ignorecase: true

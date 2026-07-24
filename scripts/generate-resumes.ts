@@ -11,10 +11,13 @@ import { publications } from "../src/data/publications";
 import { messages } from "../src/i18n/messages";
 import type { Locale, Localized } from "../src/i18n/schema";
 
-const TEMPLATE_DIR = "/Volumes/Scriptorium/1.Expeditio/cv Curriculum Vitae";
+const TEMPLATE_DIR = process.env.PORTFOLIO_LATEX_TEMPLATE_DIR
+  ? path.resolve(process.env.PORTFOLIO_LATEX_TEMPLATE_DIR)
+  : path.resolve("src/cv_curriculum_vitae_latex/other_versions/cv Curriculum Vitae");
 const OUTPUT_DIR = path.resolve("public/documents");
 const GENERATED_DIR = path.resolve("generated/resumes");
 const LEGACY_RESUME_FILE = "davi-guanabara-resume.pdf";
+const REQUIRED_OUTPUTS = ["resume-en.pdf", "resume-pt.pdf"].map((fileName) => path.join(OUTPUT_DIR, fileName));
 
 const resolveLocalized = <T>(value: Localized<T>, locale: Locale) => value[locale];
 
@@ -184,6 +187,16 @@ const renderMain = (template: string, locale: Locale) =>
       "\\headright{\\cvlabeleducation}\n\\cveducation\n\n\\headright{\\cvlabelpublications}\n\\cvpublications\n\n\\headright{\\cvlabelawards}\n\\cvawards\n\n\\headright{\\cvlabelinterests}"
     );
 
+const hasLatexToolchain = () => {
+  const result = spawnSync("latexmk", ["-v"], {
+    encoding: "utf8"
+  });
+
+  return result.status === 0;
+};
+
+const hasExistingResumeOutputs = () => REQUIRED_OUTPUTS.every((filePath) => existsSync(filePath));
+
 const compileLatex = (workDir: string, fileName: string) => {
   const result = spawnSync(
     "latexmk",
@@ -201,11 +214,29 @@ const compileLatex = (workDir: string, fileName: string) => {
 
 const main = async () => {
   if (!existsSync(TEMPLATE_DIR)) {
+    if (hasExistingResumeOutputs()) {
+      console.warn(
+        `LaTeX template directory not found: ${TEMPLATE_DIR}. Using committed PDF artifacts already present in public/documents.`
+      );
+      return;
+    }
+
     throw new Error(`LaTeX template directory not found: ${TEMPLATE_DIR}`);
   }
 
   await mkdir(OUTPUT_DIR, { recursive: true });
   await mkdir(GENERATED_DIR, { recursive: true });
+
+  if (!hasLatexToolchain()) {
+    if (hasExistingResumeOutputs()) {
+      console.warn("latexmk is not available. Using committed PDF artifacts already present in public/documents.");
+      return;
+    }
+
+    throw new Error(
+      "latexmk is not available and no committed resume PDFs were found in public/documents. Build the resumes locally first or install a LaTeX toolchain."
+    );
+  }
 
   const workDir = await mkdtemp(path.join(os.tmpdir(), "portfolio-resume-"));
 

@@ -1,0 +1,14 @@
+document:
+  language: en-US
+  babel: english
+labels:
+  contact: Contact
+  location: Location
+  date: Dates
+  section_experience: Experience
+  section_projects: Selected Projects
+  section_education: Education
+  section_skills: Technical Skills
+  section_links: Links
+  section_languages: Languages
+  current: Present

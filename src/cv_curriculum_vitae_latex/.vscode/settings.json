@@ -1,0 +1,84 @@
+{
+  // ===============================
+  // Auto build
+  // ===============================
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "files.autoSave": "onFocusChange",
+
+  // ===============================
+  // Build control
+  // ===============================
+  "latex-workshop.latex.build.enableMagicComments": true,
+  //"latex-workshop.latex.build.forceRecipeUsage": true,
+  "latex-workshop.latex.autoClean.run": "onFailed",
+
+  // ===============================
+  // Formatter (DESLIGADO)
+  // SVG
+  // ===============================
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-outdir=%WORKSPACE_FOLDER%/build",
+        "-auxdir=%WORKSPACE_FOLDER%/build/aux",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    }
+  ],
+
+  "latex-workshop.formatting.latex": "none",
+  "[latex]": {
+    "editor.formatOnSave": false
+  },
+
+
+
+
+
+  // ===============================
+  // Output directory
+  // ===============================
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+
+
+  // ===============================
+  // PDF viewer + SyncTeX
+  // ===============================
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+
+  // ===============================
+  // PDF appearance (opcional)
+  // ===============================
+  "latex-workshop.view.pdf.color.dark.backgroundColor": "#809080",
+  "latex-workshop.view.pdf.color.light.backgroundColor": "#809080",
+  "latex-workshop.view.pdf.color.dark.pageBorderColor": "#809080",
+  "latex-workshop.view.pdf.color.light.pageBorderColor": "#809080",
+
+  // ===============================
+  // IntelliSense
+  // ===============================
+  "latex-workshop.intellisense.update.aggressive.enabled": true,
+
+
+
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.rulers": [120],
+
+}

@@ -1,0 +1,53 @@
+items:
+  - id: loyal-wingmen-rl
+    title:
+      pt: Deep Reinforcement Learning Applied to Loyal Wingmen Drones
+      en: Deep Reinforcement Learning Applied to Loyal Wingmen Drones
+    bullets:
+      pt:
+        - Desenvolvimento de sistema de engajamento de ameacas em combate aereo utilizando aprendizado por reforco profundo.
+        - Modelagem de ambiente de simulacao para UAVs Loyal Wingmen com tomada de decisao sob incerteza.
+        - Aplicacao de redes neurais para controle e aprendizado de politicas em cenarios dinamicos.
+      en:
+        - Development of a deep reinforcement learning threat-engagement system for Loyal Wingmen air-combat scenarios.
+        - Modeling of a UAV simulation environment for decision-making under uncertainty.
+        - Application of neural networks for control and policy learning in dynamic scenarios.
+  - id: threatsense
+    title:
+      pt: ThreatSense
+      en: ThreatSense
+    bullets:
+      pt:
+        - Ampliacao da consciencia situacional de drones Loyal Wingmen simulados.
+        - Uso de arquiteturas de redes neurais com atencao para processamento e compartilhamento sensorial entre agentes.
+        - Integracao de aprendizado supervisionado e por reforco em ambiente de simulacao.
+      en:
+        - Extension of situational awareness capabilities for simulated Loyal Wingmen drones.
+        - Use of attention-based neural architectures for multi-agent sensing and information sharing.
+        - Integration of supervised learning and reinforcement learning inside a simulation environment.
+  - id: wildfire-ai-framework
+    title:
+      pt: Wildfire AI Framework
+      en: Wildfire AI Framework
+    bullets:
+      pt:
+        - Framework modular para aprendizado supervisionado aplicado a dados geotemporais.
+        - Uso de mecanismos de atencao para modelagem de relacoes espaciais e temporais.
+        - Desenvolvimento de pipeline de avaliacao, logging e experimentacao para reproducibilidade e comparacao de modelos.
+      en:
+        - Modular framework for supervised learning applied to geo-temporal data.
+        - Use of attention mechanisms for modeling spatial and temporal relationships.
+        - Evaluation, logging, and experimentation pipeline for reproducibility and model comparison.
+  - id: airspace-management-uav
+    title:
+      pt: Simulacao e Gerenciamento de Espaco Aereo para UAVs
+      en: Airspace Simulation and Management for UAVs
+    bullets:
+      pt:
+        - Desenvolvimento de modelos e simulacoes para coordenacao de multiplos UAVs em ambiente urbano de baixa altitude.
+        - Foco em tomada de decisao distribuida, gestao de trafego aereo e seguranca operacional.
+        - Exploracao de abordagens baseadas em sistemas multiagente e modelagem computacional para suporte a operacoes de AAM.
+      en:
+        - Development of models and simulations for coordinating multiple UAVs in low-altitude urban environments.
+        - Focus on distributed decision-making, air-traffic management, and operational safety.
+        - Exploration of multi-agent and computational modeling approaches to support AAM operations.

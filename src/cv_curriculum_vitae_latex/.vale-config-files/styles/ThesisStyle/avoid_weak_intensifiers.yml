@@ -1,0 +1,14 @@
+extends: existence
+message: "Avoid weak intensifier '%s'. Be precise instead."
+level: suggestion
+ignorecase: true
+tokens:
+  - very
+  - clearly
+  - obviously
+  - basically
+  - simply
+  - actually
+  - just
+  - extremely
+  - highly

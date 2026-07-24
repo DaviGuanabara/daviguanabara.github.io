@@ -1,0 +1,4 @@
+extends: sentence-length
+message: "Sentence is too long (%d words). Consider splitting."
+level: suggestion
+max: 30

@@ -1,0 +1,51 @@
+items:
+  - id: ai-research-engineering
+    title:
+      pt: Projetos de pesquisa e engenharia em IA
+      en: AI Research and Engineering Projects
+    organization:
+      pt: Pesquisa independente e aplicada
+      en: Independent and applied research
+    start: "2022"
+    end: present
+    bullets:
+      en:
+        - Development of reinforcement learning systems for UAV coordination, including multi-agent environments.
+        - Design of modular learning frameworks with attention mechanisms for geo-temporal data.
+        - Implementation of knowledge distillation pipelines with teacher-student architectures.
+      pt:
+        - Desenvolvimento de sistemas de aprendizado por reforco para coordenacao de UAVs, incluindo ambientes multiagente.
+        - Projeto de frameworks modulares de aprendizado com mecanismos de atencao para dados geotemporais.
+        - Implementacao de pipelines de distilacao de conhecimento com arquiteturas teacher-student.
+  - id: wildfire-framework
+    title:
+      pt: Wildfire AI Framework
+      en: Wildfire AI Framework
+    organization:
+      pt: Framework de ML aplicado
+      en: Applied ML framework
+    start: "2024"
+    end: present
+    bullets:
+      en:
+        - Structured evaluation pipeline with logging, benchmarking, and optimisation loops.
+        - Modular architecture with target providers, replay buffers, and learning managers.
+      pt:
+        - Pipeline estruturado de avaliacao com logging, benchmarking e ciclos de otimizacao.
+        - Arquitetura modular com target providers, replay buffers e learning managers.
+  - id: threatsense-threatengage
+    title:
+      pt: ThreatSense / ThreatEngage
+      en: ThreatSense / ThreatEngage
+    organization:
+      pt: Sistemas autonomos simulados
+      en: Simulated autonomous systems
+    start: "2024"
+    end: present
+    bullets:
+      en:
+        - Simulation of multi-agent pursuit systems combining reinforcement learning and behavior trees.
+        - Hybrid architecture integrating rule-based and learning-based agents.
+      pt:
+        - Simulacao de sistemas de perseguicao multiagente combinando aprendizado por reforco e behavior trees.
+        - Arquitetura hibrida integrando agentes baseados em regras e agentes baseados em aprendizado.

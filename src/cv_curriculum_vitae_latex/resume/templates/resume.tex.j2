@@ -1,0 +1,81 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[{{ language.document.babel }}]{babel}
+\input{resume/styles/resume-base.sty}
+\input{resume/layouts/{{ profile.layout }}.tex}
+\input{resume/themes/{{ profile.theme }}.tex}
+
+\ResumeName{ {{ person.display_name | tex }} }
+\ResumeTitle{ {{ profile.title[lang] | tex }} }
+\ResumeEmail{ {{ person.email | tex }} }
+\ResumePhone{ {{ person.phone | tex }} }
+\ResumeLocation{ {{ person.location[lang] | tex }} }
+
+\begin{document}
+\ResumeMakeHeader
+
+{% for section in rendered_sections %}
+{% if section.type == "experience" %}
+\ResumeSection{ {{ labels.section_experience | tex }} }
+{% for item in section["items"] %}
+\ResumeEntry
+  { {{ item.title[lang] | tex }} }
+  { {{ item.organization[lang] | tex }} }
+  { {{ item.date_range | tex }} }
+  {}
+\ResumeDetailListStart
+{% for bullet in item.bullets[lang] %}
+\ResumeDetail{ {{ bullet | tex }} }
+{% endfor %}
+\ResumeDetailListEnd
+{% endfor %}
+{% elif section.type == "projects" %}
+\ResumeSection{ {{ labels.section_projects | tex }} }
+{% for item in section["items"] %}
+\ResumeEntry
+  { {{ item.title[lang] | tex }} }
+  {}
+  {}
+  {}
+\ResumeDetailListStart
+{% for bullet in item.bullets[lang] %}
+\ResumeDetail{ {{ bullet | tex }} }
+{% endfor %}
+\ResumeDetailListEnd
+{% endfor %}
+{% elif section.type == "education" %}
+\ResumeSection{ {{ labels.section_education | tex }} }
+{% for item in section["items"] %}
+\ResumeEntry
+  { {{ item.degree[lang] | tex }} }
+  { {{ item.institution[lang] | tex }} }
+  { {{ item.date_range | tex }} }
+  {}
+{% if item.details and item.details.get(lang) %}
+\ResumeDetailListStart
+{% for detail in item.details[lang] %}
+\ResumeDetail{ {{ detail | tex }} }
+{% endfor %}
+\ResumeDetailListEnd
+{% endif %}
+{% endfor %}
+{% elif section.type == "skills" %}
+\ResumeSection{ {{ labels.section_skills | tex }} }
+{% for group in skills.groups %}
+\ResumeSkillGroup
+  { {{ group.title[lang] | tex }} }
+  { {% for skill in group.localized_items %}{{ skill | tex }}{% if not loop.last %}, {% endif %}{% endfor %} }
+{% endfor %}
+{% elif section.type == "links" %}
+\ResumeSection{ {{ labels.section_links | tex }} }
+{% for link in person.links %}
+\ResumeLinkItem{ {{ link.label | tex }} }{ \href{ {{ link.url }} }{ {{ link.value | tex }} } }
+{% endfor %}
+{% elif section.type == "languages" %}
+\ResumeSection{ {{ labels.section_languages | tex }} }
+{% for language_item in person.languages %}
+\ResumeLanguageItem{ {{ language_item.name[lang] | tex }} }{ {{ language_item.level[lang] | tex }} }
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+\end{document}

@@ -1,0 +1,25 @@
+id: research-en
+language: en
+layout: ats-onecol
+theme: clean
+output_name: davi_aragao_research_en
+title:
+  en: AI research resume
+sections:
+  - type: experience
+    ids:
+      - ai-research-engineering
+      - wildfire-framework
+      - threatsense-threatengage
+  - type: education
+    ids:
+      - ita-phd
+      - ita-data-science
+      - ita-prof-master
+  - type: projects
+    ids:
+      - wildfire-ai-framework
+      - threatsense
+      - loyal-wingmen-rl
+  - type: skills
+  - type: links

@@ -1,0 +1,16 @@
+extends: existence
+message: "Avoid strong claim '%s'. Prefer evaluate, assess, examine, or analyze."
+level: warning
+ignorecase: true
+tokens:
+  - validate
+  - validates
+  - validated
+  - validation
+  - prove
+  - proves
+  - proven
+  - guarantee
+  - guarantees
+  - demonstrate
+  - demonstrates

@@ -1,0 +1,9 @@
+extends: existence
+message: "Avoid overusing this phrase. Consider rephrasing (e.g., 'This paper...', 'We...', 'The proposed framework...')."
+level: warning
+ignorecase: true
+
+tokens:
+  - '\bin this work\b'
+  - '\bin this way\b'
+  - '\bby construction\b'

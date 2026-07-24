@@ -1,0 +1,10 @@
+extends: existence
+message: "Avoid Latin-formal academic redundancy '%s'."
+level: suggestion
+ignorecase: true
+tokens:
+  - the present work
+  - this present work
+  - the present study
+  - the current work
+  - the current study
