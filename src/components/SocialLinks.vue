@@ -17,6 +17,8 @@ const icons = {
   Resume: ArrowDownTrayIcon
 } as const;
 
+const isAssetLink = (href: string) => href.startsWith("/documents/") || /\.[a-z0-9]+$/i.test(href);
+
 const resolveHref = (href: string) => {
   if (href.startsWith("http://") || href.startsWith("https://")) {
     return href;
@@ -24,11 +26,13 @@ const resolveHref = (href: string) => {
 
   if (href.startsWith("/")) {
     const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
-    return `${baseUrl}/#${href}`;
+    return isAssetLink(href) ? `${baseUrl}${href}` : `${baseUrl}/#${href}`;
   }
 
   return href;
 };
+
+const isExternalLink = (href: string) => href.startsWith("http://") || href.startsWith("https://");
 </script>
 
 <template>
@@ -37,8 +41,9 @@ const resolveHref = (href: string) => {
       v-for="item in profile.socials"
       :key="item.label"
       :href="resolveHref(item.href)"
-      :target="item.href.startsWith('http') ? '_blank' : undefined"
-      :rel="item.href.startsWith('http') ? 'noreferrer' : undefined"
+      :target="isExternalLink(item.href) ? '_blank' : undefined"
+      :rel="isExternalLink(item.href) ? 'noreferrer' : undefined"
+      :download="item.label === 'Resume' ? '' : undefined"
       :class="item.label === 'Resume' ? 'button-primary' : 'button-secondary'"
     >
       <component :is="icons[item.label as keyof typeof icons] ?? LinkIcon" class="h-4 w-4" />
