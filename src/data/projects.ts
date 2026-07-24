@@ -204,7 +204,7 @@ export const projects: Project[] = [
         href: "https://github.com/DaviGuanabara/wildfire_pyro/blob/main/README.md"
       }
     ],
-    image: "/images/projects/wildfire/stations_map.pdf",
+    image: "/images/projects/wildfire/architecture.png",
     screenshots: []
   }
 ];

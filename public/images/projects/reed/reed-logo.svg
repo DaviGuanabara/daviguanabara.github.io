@@ -1,0 +1,75 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F6F1E8"/>
+
+  <!-- Nodes (composition layer) -->
+  <circle cx="330" cy="165" r="22" fill="#1F2933"/>
+  <circle cx="510" cy="165" r="22" fill="#1F2933"/>
+  <circle cx="690" cy="165" r="22" fill="#1F2933"/>
+  <circle cx="870" cy="165" r="22" fill="#1F2933"/>
+
+  <!-- One outpost line per node -->
+  <g stroke="#1F2933" stroke-width="6" stroke-linecap="round">
+    <line x1="330" y1="187" x2="330" y2="485"/>
+    <line x1="510" y1="187" x2="510" y2="485"/>
+    <line x1="690" y1="187" x2="690" y2="485"/>
+    <line x1="870" y1="187" x2="870" y2="485"/>
+  </g>
+
+  <!-- Reed -->
+  <rect x="230" y="485" width="740" height="30" rx="6" fill="#C7922F"/>
+
+  <!-- Reed teeth spanning edge to edge -->
+  <g stroke="#D3A13A" stroke-width="3.5" stroke-linecap="round" opacity="0.98">
+    <line x1="245" y1="515" x2="245" y2="552"/>
+    <line x1="265" y1="515" x2="265" y2="552"/>
+    <line x1="285" y1="515" x2="285" y2="552"/>
+    <line x1="305" y1="515" x2="305" y2="552"/>
+    <line x1="325" y1="515" x2="325" y2="552"/>
+    <line x1="345" y1="515" x2="345" y2="552"/>
+    <line x1="365" y1="515" x2="365" y2="552"/>
+    <line x1="385" y1="515" x2="385" y2="552"/>
+    <line x1="405" y1="515" x2="405" y2="552"/>
+    <line x1="425" y1="515" x2="425" y2="552"/>
+    <line x1="445" y1="515" x2="445" y2="552"/>
+    <line x1="465" y1="515" x2="465" y2="552"/>
+    <line x1="485" y1="515" x2="485" y2="552"/>
+    <line x1="505" y1="515" x2="505" y2="552"/>
+    <line x1="525" y1="515" x2="525" y2="552"/>
+    <line x1="545" y1="515" x2="545" y2="552"/>
+    <line x1="565" y1="515" x2="565" y2="552"/>
+    <line x1="585" y1="515" x2="585" y2="552"/>
+    <line x1="605" y1="515" x2="605" y2="552"/>
+    <line x1="625" y1="515" x2="625" y2="552"/>
+    <line x1="645" y1="515" x2="645" y2="552"/>
+    <line x1="665" y1="515" x2="665" y2="552"/>
+    <line x1="685" y1="515" x2="685" y2="552"/>
+    <line x1="705" y1="515" x2="705" y2="552"/>
+    <line x1="725" y1="515" x2="725" y2="552"/>
+    <line x1="745" y1="515" x2="745" y2="552"/>
+    <line x1="765" y1="515" x2="765" y2="552"/>
+    <line x1="785" y1="515" x2="785" y2="552"/>
+    <line x1="805" y1="515" x2="805" y2="552"/>
+    <line x1="825" y1="515" x2="825" y2="552"/>
+    <line x1="845" y1="515" x2="845" y2="552"/>
+    <line x1="865" y1="515" x2="865" y2="552"/>
+    <line x1="885" y1="515" x2="885" y2="552"/>
+    <line x1="905" y1="515" x2="905" y2="552"/>
+    <line x1="925" y1="515" x2="925" y2="552"/>
+    <line x1="945" y1="515" x2="945" y2="552"/>
+    <line x1="965" y1="515" x2="965" y2="552"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="600"
+    y="760"
+    text-anchor="middle"
+    fill="#1F2933"
+    font-size="138"
+    font-family="Avenir Next, Montserrat, Poppins, Helvetica, Arial, sans-serif"
+    font-weight="500"
+    letter-spacing="20"
+  >
+    REED
+  </text>
+</svg>

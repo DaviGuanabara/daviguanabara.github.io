@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { projects } from "@/data/projects";
+import { resolveAssetPath } from "@/utils/resolveAssetPath";
 
 const route = useRoute();
 
@@ -65,7 +66,7 @@ const project = computed(() => projects.find((item) => item.slug === route.param
       <aside class="space-y-5">
         <img
           v-if="project.architectureDiagram || project.image"
-          :src="project.architectureDiagram ?? project.image"
+          :src="resolveAssetPath(project.architectureDiagram ?? project.image)"
           :alt="`${project.title} project visual`"
           class="w-full rounded-2xl border border-slate-200/80 dark:border-slate-800/80"
         />
@@ -95,7 +96,7 @@ const project = computed(() => projects.find((item) => item.slug === route.param
         <img
           v-for="screenshot in project.screenshots"
           :key="screenshot"
-          :src="screenshot"
+          :src="resolveAssetPath(screenshot)"
           :alt="`${project.title} image`"
           class="w-full rounded-2xl border border-slate-200/80 dark:border-slate-800/80"
           loading="lazy"
