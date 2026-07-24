@@ -14,6 +14,7 @@ import type { Locale, Localized } from "../src/i18n/schema";
 const TEMPLATE_DIR = "/Volumes/Scriptorium/1.Expeditio/cv Curriculum Vitae";
 const OUTPUT_DIR = path.resolve("public/documents");
 const GENERATED_DIR = path.resolve("generated/resumes");
+const LEGACY_RESUME_FILE = "davi-guanabara-resume.pdf";
 
 const resolveLocalized = <T>(value: Localized<T>, locale: Locale) => value[locale];
 
@@ -212,6 +213,7 @@ const main = async () => {
     await cp(TEMPLATE_DIR, workDir, { recursive: true });
 
     const mainTemplate = await readFile(path.join(workDir, "main.tex"), "utf8");
+    let defaultResumePdf: string | null = null;
 
     for (const locale of ["pt", "en"] as const) {
       const dataFileName = locale === "pt" ? "cv_data.tex" : "cv_data_en.tex";
@@ -229,6 +231,15 @@ const main = async () => {
       const outputPdf = path.join(workDir, `resume-${locale}.pdf`);
       const publicPdf = path.join(OUTPUT_DIR, `resume-${locale}.pdf`);
       await cp(outputPdf, publicPdf);
+
+      if (locale === "en") {
+        defaultResumePdf = outputPdf;
+      }
+    }
+
+    if (defaultResumePdf) {
+      // Keep a compatibility alias for stale cached clients that still request the old resume filename.
+      await cp(defaultResumePdf, path.join(OUTPUT_DIR, LEGACY_RESUME_FILE));
     }
   } finally {
     await rm(workDir, { recursive: true, force: true });
