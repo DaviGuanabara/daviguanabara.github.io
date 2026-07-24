@@ -69,6 +69,7 @@ export const projects: Project[] = [
         href: "..."
       }
     ],
+    image: "/images/projects/reed/reed-logo.svg",
     screenshots: []
   },
   {
@@ -161,6 +162,7 @@ export const projects: Project[] = [
         href: "https://doi.org/10.1007/s10846-026-02415-8"
       }
     ],
+    image: "/images/projects/dronechase/occlusion.png",
     screenshots: []
   },
   {
