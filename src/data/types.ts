@@ -13,6 +13,14 @@ export type Profile = {
 };
 
 export type ProjectLink = {
+  type:
+  | "github"
+  | "demo"
+  | "paper"
+  | "documentation"
+  | "video"
+  | "slides";
+
   label: string;
   href: string;
 };

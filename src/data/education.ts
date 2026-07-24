@@ -2,28 +2,28 @@ import type { Education } from "./types";
 
 export const education: Education[] = [
   {
-    degree: "PhD in Electronic Engineering and Computing",
+    degree: "Ph.D. in Electronic Engineering and Computing (EEC) - Informatics",
     institution: "Aeronautics Institute of Technology (ITA)",
     url: "http://www.ita.br/posgrad/pgeec",
     period: "2025 - Present",
     details: "Current doctoral research in data science, intelligent systems and engineering.",
   },
   {
-    degree: "Graduate Certificate in Data Science",
+    degree: "Graduate Certificate in Data Science (CEDS)",
     institution: "Aeronautics Institute of Technology (ITA)",
     url: "https://www.ceds.ita.br",
     period: "2024 - 2026",
     details: "Graduate coursework in data science."
   },
   {
-    degree: "Master's in Aeronautical Computing",
+    degree: "Master's in Aeronautical Computing (MPCOMP)",
     institution: "Aeronautics Institute of Technology (ITA)",
     url: "https://www.mpcomp.ita.br",
     period: "2021 - 2024",
     details: "Research-oriented in Deep Reinforcement Learning"
   },
   {
-    degree: "Graduate Certificate in Business Administration",
+    degree: "Graduate Certificate in Business Management",
     institution: "Fundação Getulio Vargas (FGV)",
     url: "https://educacao-executiva.fgv.br/cursos/online/mba-online/mba-em-gestao-empresarial",
     period: "2019 - 2021",

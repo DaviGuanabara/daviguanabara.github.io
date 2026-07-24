@@ -22,7 +22,19 @@ export const projects: Project[] = [
       "Airspace Topology",
       "Decision Support"
     ],
-    links: [],
+    links: [
+      {
+        type: "github",
+        label: "Source Code",
+        href: "..."
+      },
+      {
+        type: "documentation",
+        label: "Documentation",
+        href: "..."
+      }
+    ],
+    image: "/images/projects/skyweaver/frontend.png",
     screenshots: []
   },
   {
@@ -45,44 +57,18 @@ export const projects: Project[] = [
       "Dependency Tracking",
       "Strong Typing"
     ],
-    links: [],
-    screenshots: []
-  },
-  {
-    slug: "dronechase",
-    title: "dronechase",
-    summary:
-      "Multi-stage simulation framework for training loyal wingmen in defense scenarios with deep reinforcement learning.",
-    motivation:
-      "Developed as part of a master's thesis at ITA for threat-engagement scenarios involving loyal wingmen and loitering munitions.",
-    problem:
-      "Autonomous threat engagement in aerial defense scenarios requires policies that can learn from high-dimensional, evolving observations inside realistic simulation loops.",
-    architecture:
-      "The repository is organized into stage-based training applications, a core `threatengage` simulation package, and experimental `threatsense` perception modules.",
-    engineeringDecisions: [
-      "Stable Baselines3 for reinforcement learning workflows",
-      "PyFlyt and PyBullet for 3D simulation",
-      "Curriculum-style stages from stage01 to stage03",
-      "Separate support and documentation artifacts for experimental stages"
-    ],
-    lessonsLearned: [
-      "Stage-based progression helps isolate complexity during policy development.",
-      "Simulation infrastructure becomes a first-class engineering concern in applied reinforcement learning."
-    ],
-    technologies: [
-      "Python",
-      "Deep Reinforcement Learning",
-      "Stable Baselines3",
-      "PyFlyt",
-      "PyBullet"
-    ],
     links: [
-      { label: "GitHub", href: "https://github.com/DaviGuanabara/dronechase" },
-      { label: "Documentation", href: "https://github.com/DaviGuanabara/dronechase/blob/main/README.md" },
-      { label: "Paper", href: "https://doi.org/10.1109/SBR/WRE63066.2024.10837749" },
-      { label: "Publication", href: "https://doi.org/10.1007/s10846-026-02415-8" }
+      {
+        type: "github",
+        label: "Source Code",
+        href: "..."
+      },
+      {
+        type: "documentation",
+        label: "Documentation",
+        href: "..."
+      }
     ],
-    image: "/images/projects/dronechase/architecture.svg",
     screenshots: []
   },
   {
@@ -108,17 +94,25 @@ export const projects: Project[] = [
     ],
     technologies: ["Python", "FastAPI", "Vue", "TypeScript", "KNN", "GIS"],
     links: [
-      { label: "GitHub", href: "https://github.com/DaviGuanabara/OndeVale" },
-      { label: "Documentation", href: "https://github.com/DaviGuanabara/OndeVale/blob/main/README.md" }
+      {
+        type: "github",
+        label: "Source Code",
+        href: "https://github.com/..."
+      },
+      {
+        type: "demo",
+        label: "Live Demo",
+        href: "https://ondevale-frontend.onrender.com/"
+      }
     ],
-    image: "/images/projects/ondevale/cover.png",
+    image: "/images/projects/ondevale/frontend.png",
     screenshots: [
       "/images/projects/ondevale/price-histogram.png",
       "/images/projects/ondevale/price-m2-histogram.png"
     ]
   },
   {
-    slug: "loyal-wingmen-gat",
+    slug: "Drone Chase",
     title:
       "Deep Reinforcement Learning with Graph Attention for Cooperative Loyal Wingmen",
     summary:
@@ -146,9 +140,26 @@ export const projects: Project[] = [
       "Simulation"
     ],
     links: [
-      { label: "Repository", href: "https://github.com/DaviGuanabara/dronechase" },
-      { label: "Paper", href: "https://doi.org/10.1007/s10846-026-02415-8" },
-      { label: "Conference Paper", href: "https://doi.org/10.1109/SBR/WRE63066.2024.10837749" }
+      {
+        type: "github",
+        label: "Source Code",
+        href: "https://github.com/DaviGuanabara/dronechase"
+      },
+      {
+        type: "documentation",
+        label: "Documentation",
+        href: "https://github.com/DaviGuanabara/dronechase/blob/main/README.md"
+      },
+      {
+        type: "paper",
+        label: "Conference Paper",
+        href: "https://doi.org/10.1109/SBR/WRE63066.2024.10837749"
+      },
+      {
+        type: "paper",
+        label: "Journal Article",
+        href: "https://doi.org/10.1007/s10846-026-02415-8"
+      }
     ],
     screenshots: []
   },
@@ -180,10 +191,18 @@ export const projects: Project[] = [
       "Bayesian Optimization"
     ],
     links: [
-      { label: "GitHub", href: "https://github.com/DaviGuanabara/wildfire_pyro" },
-      { label: "Documentation", href: "https://github.com/DaviGuanabara/wildfire_pyro/blob/main/README.md" }
+      {
+        type: "github",
+        label: "Source Code",
+        href: "https://github.com/DaviGuanabara/wildfire_pyro"
+      },
+      {
+        type: "documentation",
+        label: "Documentation",
+        href: "https://github.com/DaviGuanabara/wildfire_pyro/blob/main/README.md"
+      }
     ],
-    image: "/images/projects/wildfire/architecture.png",
+    image: "/images/projects/wildfire/stations_map.pdf",
     screenshots: []
   }
 ];
